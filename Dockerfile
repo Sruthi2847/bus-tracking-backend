@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN javac -d . *.java
+RUN javac -cp ".:mysql-connector-j-9.7.0.jar" -d . *.java
 
-CMD ["java", "com.bustrack.server.MainServer"]
+CMD ["java", "-cp", ".:mysql-connector-j-9.7.0.jar", "com.bustrack.server.MainServer"]
