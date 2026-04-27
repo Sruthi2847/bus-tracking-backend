@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN javac *.java
+RUN javac -d . *.java
 
-CMD ["java", "MainServer"]
+CMD ["java", "com.bustrack.server.MainServer"]
